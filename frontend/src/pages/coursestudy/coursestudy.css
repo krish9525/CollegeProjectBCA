@@ -1,0 +1,400 @@
+.course-study-page {
+  min-height: calc(100vh - 70px);
+  background: var(--bg-main);
+}
+
+/* ===== HERO ===== */
+.cs-hero {
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.cs-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px) brightness(0.4);
+  transform: scale(1.05);
+}
+
+.cs-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 10, 40, 0.3) 0%,
+    rgba(15, 10, 40, 0.85) 100%
+  );
+}
+
+.cs-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 40px 36px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.cs-category-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 999px;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+}
+
+.cs-hero-content h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: white;
+  margin: 0 0 10px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.cs-hero-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.8);
+  margin: 0 0 16px;
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+.cs-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cs-meta-item {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255,255,255,0.12);
+  padding: 5px 12px;
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+}
+
+/* ===== BODY ===== */
+.cs-body {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 60px;
+  align-items: start;
+}
+
+/* ===== CARD ===== */
+.cs-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+}
+
+.cs-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.cs-description {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin: 0 0 24px;
+}
+
+/* ===== PROGRESS CARD ===== */
+.progress-card {
+  border-left: 4px solid var(--primary);
+}
+
+.cs-progress-track {
+  height: 12px;
+  background: var(--border-light);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.cs-progress-fill {
+  height: 100%;
+  background: var(--primary-gradient);
+  border-radius: 6px;
+  transition: width 1s ease;
+  min-width: 4px;
+}
+
+.cs-progress-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.cs-pct {
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.cs-completed-badge {
+  margin-top: 14px;
+  background: linear-gradient(135deg, rgba(16,185,129,0.12), rgba(5,150,105,0.12));
+  border: 1px solid rgba(16,185,129,0.3);
+  color: #10b981;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 16px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Stats grid */
+.cs-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.cs-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 8px;
+  background: var(--bg-section);
+  border-radius: 14px;
+  border: 1px solid var(--border-light);
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.cs-stat:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.cs-stat-icon { font-size: 22px; }
+.cs-stat-val  { font-size: 13px; font-weight: 800; color: var(--text-primary); }
+.cs-stat-label{ font-size: 11px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* What you'll learn */
+.cs-learn-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.cs-learn-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.cs-check {
+  color: #10b981;
+  font-weight: 800;
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ===== CTA CARD ===== */
+.cs-cta-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 20px;
+  position: sticky;
+  top: 90px;
+}
+
+.cs-cta-img-wrap {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.cs-cta-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.cs-cta-card:hover .cs-cta-img {
+  transform: scale(1.04);
+}
+
+.cs-cta-body {
+  padding: 24px;
+}
+
+.cs-cta-price {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+/* Mini progress */
+.cs-mini-progress {
+  margin-bottom: 16px;
+}
+
+.cs-mini-bar {
+  height: 6px;
+  background: var(--border-light);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.cs-mini-bar div {
+  height: 100%;
+  background: var(--primary-gradient);
+  border-radius: 3px;
+  min-width: 4px;
+}
+
+.cs-mini-progress span {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Start button */
+.cs-start-btn {
+  width: 100%;
+  padding: 15px;
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-purple);
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
+}
+
+.cs-start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(138,75,175,0.45);
+}
+
+/* Features list */
+.cs-cta-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+}
+
+.cs-feat {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Back button */
+.cs-back-btn {
+  width: 100%;
+  padding: 10px;
+  background: var(--bg-section);
+  color: var(--text-secondary);
+  border: 2px solid var(--border-light);
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cs-back-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Instructor card */
+.cs-instructor-card {
+  margin-top: 0;
+}
+
+.cs-instructor {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cs-inst-avatar {
+  width: 52px;
+  height: 52px;
+  background: var(--primary-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 800;
+  color: white;
+  flex-shrink: 0;
+}
+
+.cs-inst-name  { font-size: 16px; font-weight: 700; color: var(--text-primary); }
+.cs-inst-role  { font-size: 13px; color: var(--text-muted); margin: 3px 0; }
+.cs-inst-stars { font-size: 14px; color: #f59e0b; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .cs-body { grid-template-columns: 1fr; }
+  .cs-cta-card { position: static; }
+  .cs-right { order: -1; }
+}
+
+@media (max-width: 768px) {
+  .cs-hero { height: 260px; }
+  .cs-hero-content { padding: 0 20px 24px; }
+  .cs-hero-content h1 { font-size: 26px; }
+  .cs-body { padding: 20px 16px 48px; gap: 20px; }
+  .cs-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .cs-learn-grid { grid-template-columns: 1fr; }
+}

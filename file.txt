@@ -1,0 +1,120 @@
+Mern-Elearning/
+├─
+│  ├─ agents/
+│  └─ skills/
+├─ frontend/
+│  ├─ public/
+│  │  └─ vite.svg
+│  ├─ src/
+│  │  ├─ admin/
+│  │  │  ├─ Courses/
+│  │  │  │  ├─ admincourses.css
+│  │  │  │  └─ AdminCourses.jsx
+│  │  │  ├─ Dashboard/
+│  │  │  │  ├─ AdminDashbord.jsx
+│  │  │  │  └─ dashboard.css
+│  │  │  ├─ Users/
+│  │  │  │  ├─ AdminUsers.jsx
+│  │  │  │  └─ users.css
+│  │  │  └─ Utils/
+│  │  │     ├─ common.css
+│  │  │     ├─ Layout.jsx
+│  │  │     └─ Sidebar.jsx
+│  │  ├─ assets/
+│  │  │  └─ react.svg
+│  │  ├─ components/
+│  │  │  ├─ coursecard/
+│  │  │  │  ├─ courseCard.css
+│  │  │  │  └─ CourseCard.jsx
+│  │  │  ├─ footer/
+│  │  │  │  ├─ footer.css
+│  │  │  │  └─ Footer.jsx
+│  │  │  ├─ header/
+│  │  │  │  ├─ header.css
+│  │  │  │  └─ Header.jsx
+│  │  │  ├─ loading/
+│  │  │  │  ├─ loading.css
+│  │  │  │  └─ Loading.jsx
+│  │  │  └─ testimonials/
+│  │  │     ├─ testimonials.css
+│  │  │     └─ Testimonials.jsx
+│  │  ├─ context/
+│  │  │  ├─ CourseContext.jsx
+│  │  │  └─ UserContext.jsx
+│  │  ├─ pages/
+│  │  │  ├─ about/
+│  │  │  │  ├─ about.css
+│  │  │  │  └─ About.jsx
+│  │  │  ├─ account/
+│  │  │  │  ├─ account.css
+│  │  │  │  └─ Account.jsx
+│  │  │  ├─ auth/
+│  │  │  │  ├─ auth.css
+│  │  │  │  ├─ ForgotPassword.jsx
+│  │  │  │  ├─ Login.jsx
+│  │  │  │  ├─ Register.jsx
+│  │  │  │  ├─ ResetPassword.jsx
+│  │  │  │  └─ Verify.jsx
+│  │  │  ├─ coursedescription/
+│  │  │  │  ├─ coursedescription.css
+│  │  │  │  └─ CourseDescription.jsx
+│  │  │  ├─ courses/
+│  │  │  │  ├─ courses.css
+│  │  │  │  └─ Courses.jsx
+│  │  │  ├─ coursestudy/
+│  │  │  │  ├─ coursestudy.css
+│  │  │  │  └─ CourseStudy.jsx
+│  │  │  ├─ dashbord/
+│  │  │  │  ├─ dashbord.css
+│  │  │  │  └─ Dashbord.jsx
+│  │  │  ├─ home/
+│  │  │  │  ├─ home.css
+│  │  │  │  └─ Home.jsx
+│  │  │  ├─ lecture/
+│  │  │  │  ├─ lecture.css
+│  │  │  │  └─ Lecture.jsx
+│  │  │  └─ paymentsuccess/
+│  │  │     ├─ paymentsuccess.css
+│  │  │     └─ PaymentSuccess.jsx
+│  │  ├─ App.css
+│  │  ├─ App.jsx
+│  │  └─ main.jsx
+│  ├─ index.html
+│  ├─ package-lock.json
+│  ├─ package.json
+│  ├─ README.md
+│  └─ vite.config.js
+└─ server/
+   ├─ controllers/
+   │  ├─ admin.js
+   │  ├─ course.js
+   │  └─ user.js
+   ├─ database/
+   │  └─ db.js
+   ├─ middlewares/
+   │  ├─ uploads/
+   │  ├─ isAuth.js
+   │  ├─ multer.js
+   │  ├─ sendMail.js
+   │  └─ TryCatch.js
+   ├─ models/
+   │  ├─ Courses.js
+   │  ├─ Lecture.js
+   │  ├─ Payment.js
+   │  ├─ Progress.js
+   │  └─ User.js
+   ├─ routes/
+   │  ├─ admin.js
+   │  ├─ course.js
+   │  └─ user.js
+   ├─ uploads/
+   │  ├─ 086bd7d3-fdca-4982-bc6c-f3c0dd4da629.jpg
+   │  ├─ 2a94d474-aa06-472b-867e-1f937ad1f164.mkv
+   │  ├─ 5a83a37e-d874-4e32-ae19-3f7a7228b192.avif
+   │  ├─ 9ab858a1-39f0-4489-a62a-aed122a62720.avif
+   │  ├─ dda637bc-609c-489d-8008-26d8be8bce7f.avif
+   │  └─ f6eafe1e-24be-4bd7-8232-f99ee67d307f.mkv
+   ├─ .env
+   ├─ index.js
+   ├─ package-lock.json
+   └─ package.json

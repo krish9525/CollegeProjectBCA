@@ -1,0 +1,58 @@
+.student-dashboard {
+  padding: 60px 24px 80px;
+  min-height: calc(100vh - 70px);
+  background: var(--bg-main);
+}
+
+.student-dashboard h2 {
+  font-size: 36px;
+  font-weight: 800;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.student-dashboard .dashboard-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 48px;
+  font-weight: 500;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.empty-dashboard {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--text-muted);
+}
+
+.empty-dashboard span {
+  font-size: 64px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.empty-dashboard p {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .student-dashboard { padding: 40px 16px 60px; }
+  .student-dashboard h2 { font-size: 28px; }
+  .dashboard-content { grid-template-columns: 1fr; }
+}

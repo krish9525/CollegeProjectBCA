@@ -1,0 +1,208 @@
+.admin-courses {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+  padding: 28px 24px;
+  background: var(--bg-main);
+  min-height: calc(100vh - 70px);
+  align-items: start;
+}
+
+/* ===== LEFT: Course list ===== */
+.admin-courses .left {
+  min-width: 0;
+}
+
+.admin-courses .left h1 {
+  font-size: 26px;
+  font-weight: 800;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 8px;
+}
+
+.admin-courses .courses-count {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.admin-courses .dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.admin-courses .no-courses-msg {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-muted);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* ===== RIGHT: Add course form ===== */
+.admin-courses .right {
+  position: sticky;
+  top: 90px;
+}
+
+.course-form-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: var(--shadow-md);
+}
+
+.course-form-card h2 {
+  font-size: 20px;
+  font-weight: 800;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 6px;
+}
+
+.form-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0 0 24px;
+}
+
+.course-form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.course-form label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.course-form input,
+.course-form select,
+.course-form textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 2px solid var(--border-light);
+  border-radius: 12px;
+  font-size: 14px;
+  background: var(--bg-input);
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+}
+
+.course-form input:focus,
+.course-form select:focus,
+.course-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(138, 75, 175, 0.1);
+}
+
+.course-form input::placeholder,
+.course-form textarea::placeholder {
+  color: var(--text-light);
+}
+
+.course-form select option {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+/* File upload */
+.file-upload-area {
+  border: 2px dashed var(--border-light);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.file-upload-area:hover {
+  border-color: var(--primary);
+  background: rgba(138, 75, 175, 0.04);
+}
+
+.file-upload-area input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.upload-icon {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.upload-text {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Image preview */
+.img-preview {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  border: 2px solid var(--border-light);
+}
+
+/* Price row */
+.price-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Submit btn */
+.course-form .common-btn {
+  width: 100%;
+  margin-top: 8px;
+  font-size: 15px;
+  padding: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+  .admin-courses {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-courses .right {
+    position: static;
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-courses { padding: 20px 16px; }
+  .price-row { grid-template-columns: 1fr; }
+}

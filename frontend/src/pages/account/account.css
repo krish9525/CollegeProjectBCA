@@ -1,0 +1,191 @@
+.account-page {
+  min-height: calc(100vh - 70px);
+  background: var(--bg-main);
+  padding: 48px 24px 80px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.profile {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  padding: 36px 32px;
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Avatar */
+.profile-avatar {
+  width: 88px;
+  height: 88px;
+  background: var(--primary-gradient);
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 800;
+  color: white;
+  box-shadow: var(--shadow-purple);
+  border: 4px solid var(--bg-card);
+  outline: 3px solid rgba(138,75,175,0.2);
+}
+
+.profile h2 {
+  font-size: 26px;
+  font-weight: 800;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 8px;
+}
+
+.profile-role {
+  display: inline-block;
+  background: rgba(138, 75, 175, 0.1);
+  color: var(--primary);
+  padding: 4px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border: 1px solid rgba(138,75,175,0.2);
+}
+
+/* Info rows */
+.profile-info {
+  text-align: left;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 16px;
+  background: var(--bg-section);
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+}
+
+.profile-info-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.profile-info-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Navigation section */
+.profile-nav-section {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-light);
+  text-align: left;
+}
+
+.profile-nav-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 14px;
+}
+
+.profile-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.profile-nav-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 12px;
+  background: var(--bg-section);
+  border: 2px solid var(--border-light);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: center;
+}
+
+.profile-nav-btn:hover {
+  border-color: var(--nav-color, var(--primary));
+  background: color-mix(in srgb, var(--nav-color, #8a4baf) 8%, var(--bg-card));
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.pnb-icon {
+  font-size: 26px;
+}
+
+.pnb-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  line-height: 1.3;
+}
+
+.profile-nav-btn:hover .pnb-label {
+  color: var(--nav-color, var(--primary));
+}
+
+/* Logout button */
+.profile-logout-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(239,68,68,0.3);
+}
+
+.profile-logout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(239,68,68,0.4);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .account-page { padding: 28px 16px 60px; }
+  .profile { padding: 28px 20px; }
+  .profile-nav-grid { grid-template-columns: 1fr 1fr; }
+}
